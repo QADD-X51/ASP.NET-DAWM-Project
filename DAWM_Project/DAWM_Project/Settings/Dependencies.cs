@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAWM_Project.Data;
+using System;
 
 namespace DAWM_Project.Settings
 {
@@ -10,7 +11,7 @@ namespace DAWM_Project.Settings
             applicationBuilder.Services.AddControllers();
             applicationBuilder.Services.AddSwaggerGen();
 
-            //applicationBuilder.Services.AddDbContext<AppDbContext>();
+            applicationBuilder.Services.AddDbContext<AppDbContext>();
 
             AddRepositories(applicationBuilder.Services);
             AddServices(applicationBuilder.Services);
@@ -24,7 +25,7 @@ namespace DAWM_Project.Settings
         private static void AddRepositories(IServiceCollection services)
         {
             //services.AddScoped<StudentsRepository>();
-            //services.AddScoped<UnitOfWork>();
+            services.AddScoped<UnitOfWork>();
         }
 
     }
