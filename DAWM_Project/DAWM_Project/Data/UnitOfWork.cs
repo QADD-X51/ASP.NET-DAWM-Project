@@ -1,18 +1,25 @@
-﻿namespace DAWM_Project.Data
+﻿using DAWM_Project.Data.Repositories;
+
+namespace DAWM_Project.Data
 {
     public class UnitOfWork
     {
 
         private readonly AppDbContext _dbContext;
 
+        public UserRepository Users { get; set; }
+        public CarRepository Cars { get; set; }
+
         public UnitOfWork
         (
-            AppDbContext dbContext
-            //StudentsRepository studentsRepository
+            AppDbContext dbContext,
+            UserRepository userRepository,
+            CarRepository carRepository
         )
         {
             _dbContext = dbContext;
-            //Students = studentsRepository;
+            Users = userRepository;
+            Cars = carRepository;
         }
 
         public void SaveChanges()

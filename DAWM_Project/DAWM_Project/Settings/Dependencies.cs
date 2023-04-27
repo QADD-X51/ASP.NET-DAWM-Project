@@ -1,4 +1,6 @@
 ﻿using DAWM_Project.Data;
+using DAWM_Project.Data.Repositories;
+using DAWM_Project.Services;
 using System;
 
 namespace DAWM_Project.Settings
@@ -19,12 +21,13 @@ namespace DAWM_Project.Settings
 
         private static void AddServices(IServiceCollection services)
         {
-            //services.AddScoped</*Service class here*/>();
+            services.AddScoped<UserService>();
         }
 
         private static void AddRepositories(IServiceCollection services)
         {
-            //services.AddScoped<StudentsRepository>();
+            services.AddScoped<UserRepository>();
+            services.AddScoped<CarRepository>();
             services.AddScoped<UnitOfWork>();
         }
 
