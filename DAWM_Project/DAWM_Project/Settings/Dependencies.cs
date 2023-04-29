@@ -22,6 +22,7 @@ namespace DAWM_Project.Settings
         private static void AddServices(IServiceCollection services)
         {
             services.AddScoped<UserService>();
+            services.AddScoped<CarService>();
         }
 
         private static void AddRepositories(IServiceCollection services)

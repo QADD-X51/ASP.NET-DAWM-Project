@@ -3,9 +3,12 @@ using DAWM_Project.Services;
 using DAWM_Project.Services.Dtos;
 using DAWM_Project.Data.Entity;
 using DAWM_Project.Data;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace DAWM_Project.Controllers
 {
+    [ApiController]
+    [Route("api/users")]
     public class UserController : Controller
     {
         private UserService _userService;
@@ -29,8 +32,9 @@ namespace DAWM_Project.Controllers
         }
 
         [HttpGet("/login")]
-        public IActionResult Login(UserLoginDto payload)
+        public IActionResult Login(string username, string password)
         {
+            var payload = new UserLoginDto { Username = username, Password = password };
             var result = _userService.LoginUser(payload);
 
             if (result == null)
