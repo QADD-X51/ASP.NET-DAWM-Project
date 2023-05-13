@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WIP\\Repos\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj": {}
+    "C:\\Users\\andre\\Desktop\\DAMW\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj": {}
   },
   "projects": {
-    "D:\\WIP\\Repos\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj": {
+    "C:\\Users\\andre\\Desktop\\DAMW\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WIP\\Repos\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Desktop\\DAMW\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj",
         "projectName": "DAWM_Project",
-        "projectPath": "D:\\WIP\\Repos\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj",
-        "packagesPath": "C:\\Users\\QADD\\.nuget\\packages\\",
-        "outputPath": "D:\\WIP\\Repos\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\obj\\",
+        "projectPath": "C:\\Users\\andre\\Desktop\\DAMW\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\Desktop\\DAMW\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\QADD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,23 +42,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[8.0.0-preview.3.23174.2, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[8.0.0-preview.3.23174.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[8.0.0-preview.3.23174.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[8.0.0-preview.3.23174.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
