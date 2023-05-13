@@ -57,7 +57,7 @@ namespace DAWM_Project.Controllers
         [HttpGet("/getFilteredCars")]
         public IActionResult GetFilteredCars(string maker="all", string modelName="all", 
             int minYear=0, int maxYear=10000, int minPower=0, int maxPower=2000,
-            int minEngineCapacity=0, int maxEngineCapacity=6000,
+            int minEngineCapacity=0, int maxEngineCapacity=30000,
             int minMileage=0, int maxMileage=1000000,
             float minPrice=0, float maxPrice=10000000,
             bool? negociable = null)
