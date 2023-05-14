@@ -1,4 +1,5 @@
-﻿namespace DAWM_Project.Data.Entity
+﻿
+namespace DAWM_Project.Data.Entity
 {
     public class User : BaseEntity
     {
@@ -7,5 +8,6 @@
         public string Password { get; set; }
         public string Phone { get; set; }
         public List<Car> Cars { get; set; }
+        public int RoleId { get; set; }
     }
 }

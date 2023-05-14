@@ -1,6 +1,7 @@
 ﻿using DAWM_Project.Data;
 using DAWM_Project.Data.Repositories;
 using DAWM_Project.Services;
+using Microsoft.AspNetCore.Authentication;
 using System;
 
 namespace DAWM_Project.Settings
@@ -23,6 +24,7 @@ namespace DAWM_Project.Settings
         {
             services.AddScoped<UserService>();
             services.AddScoped<CarService>();
+            services.AddScoped<AuthorizationService>();
         }
 
         private static void AddRepositories(IServiceCollection services)

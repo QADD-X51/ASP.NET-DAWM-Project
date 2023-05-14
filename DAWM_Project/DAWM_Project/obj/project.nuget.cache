@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "a/Lfbv6kbqO38z0GE8B84AdTR5o2yY1ThRySQNbx1wR12aoXRegJMZDvMQ82HY25xUEE9dm7yOlSxaJ5dQ8WUA==",
+  "dgSpecHash": "Z703R6E32++txcQ6aDFgR+vWcmHauJcSOvsq6FqUUStqcF1CBhDKQlYLVgJEX4C7cQ9ad4UMXM6DP6EeX6rPrA==",
   "success": true,
   "projectFilePath": "C:\\Users\\andre\\Desktop\\DAMW\\ASP.NET-DAWM-Project\\DAWM_Project\\DAWM_Project\\DAWM_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.16\\microsoft.aspnetcore.authentication.jwtbearer.6.0.16.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.0\\microsoft.data.sqlclient.5.1.0.nupkg.sha512",

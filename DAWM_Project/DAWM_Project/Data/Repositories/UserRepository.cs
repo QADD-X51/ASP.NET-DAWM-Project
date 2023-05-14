@@ -20,6 +20,14 @@ namespace DAWM_Project.Data.Repositories
             return rezult;
         }
 
+        public User GetByUsername(string username)
+        {
+            var rezult = _dbContext.Users.ToList()
+                .FirstOrDefault(e => e.Username == username, null);
+
+            return rezult;
+        }
+
         public bool UsernameTaken(string username)
         {
             var rezult = _dbContext.Users.ToList()

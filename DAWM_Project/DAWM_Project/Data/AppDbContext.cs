@@ -8,7 +8,7 @@ namespace DAWM_Project.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                    .UseSqlServer("Server=DESKTOP-LHAQ4GH;Database=DAWMProj;User Id=useradmin;Password=1q2w3e;TrustServerCertificate=True;")
+                    .UseSqlServer("Server=LAPTOP-LTRK0GTF\\SQLEXPRESS;Database=DAWMProj;Trusted_Connection=True;TrustServerCertificate=true")
                     .LogTo(Console.WriteLine);
         }
 

@@ -7,40 +7,61 @@ namespace DAWM_Project.Services
     public class UserService
     {
         private readonly UnitOfWork _unitOfWork;
-
-        public UserService(UnitOfWork unitOfWork)
+        private AuthorizationService authService { get; set; }
+        public UserService(UnitOfWork unitOfWork, AuthorizationService authService)
         {
             _unitOfWork = unitOfWork;
+            this.authService = authService;
         }
 
-        public UserAddDto RegisterUser(UserAddDto payload)
+        public void RegisterUser(UserAddDto payload)
         {
-            if (payload == null) return null;
+            if (payload == null) return;
+
+            var hashedPassword = authService.HashPassword(payload.Password);
 
             var newUser = new User
             {
                 Username = payload.Username,
-                Password = payload.Password,
+                Password = hashedPassword,
                 Email = payload.Email,
                 Phone = payload.Phone
             };
 
-            if (_unitOfWork.Users.UsernameTaken(newUser.Username))
-                return null;
-
             _unitOfWork.Users.Insert(newUser);
             _unitOfWork.SaveChanges();
-
-            return payload;
         }
 
-        public User LoginUser(UserLoginDto payload)
+        public string Validate(UserLoginDto payload)
         {
-            if (payload == null) return null;
+            var user = _unitOfWork.Users.GetByUsername(payload.Username);
 
-            var exists = _unitOfWork.Users.GetUserByCredentials(payload.Username, payload.Password);
+            var passwordFine = authService.VerifyHashedPassword(user.Password, payload.Password);
 
-            return exists;
+            if (passwordFine)
+            {
+                var role = GetRole(user);
+
+                return authService.GetToken(user, role);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        public string GetRole(User user)
+        {
+
+            if (user.Email == "andreidei0406@admin.ro")
+            {
+                return "Admin";
+            }
+            else
+            {
+                return "User";
+            }
         }
 
     }
