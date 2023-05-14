@@ -67,5 +67,31 @@ namespace DAWM_Project.Services
         {
             return _unitOfWork.Cars.GetAll();
         }
+
+        public List<Car> GetFilteredCars(string? maker= "", string? modelName = "",
+            int? minYear = 0, int? maxYear = 10000, int? minPower = 0, int? maxPower = 2000,
+            int? minEngineCapacity = 0, int? maxEngineCapacity = 30000,
+            int? minMileage = 0, int? maxMileage = 1000000,
+            float? minPrice = 0, float? maxPrice = 10000000,
+            bool? negociable = null)
+        {
+            var rez = GetAll();
+
+            var rezFiltered = new List<Car>();
+
+            foreach (var car in rez)
+            {
+                if (!car.Sold)
+                {
+                    if ((car.Maker == maker || maker == "") && (car.ModelName == modelName || modelName == "" || car.ModelName.ToLower().Contains(modelName.ToLower())) && (car.ModelYear >= minYear && car.ModelYear <= maxYear)
+            && (car.Power >= minPower && car.Power <= maxPower) && (car.EngineCapacity >= minEngineCapacity && car.EngineCapacity <= maxEngineCapacity)
+            && (car.Mileage >= minMileage && car.Mileage <= maxMileage) && (car.Price >= minPrice && car.Price <= maxPrice) && (car.Negotiable == negociable || negociable == null))
+                    {
+                        rezFiltered.Add(car);
+                    }
+                }
+            }
+            return rezFiltered;
+        }
     }
 }
