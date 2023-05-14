@@ -1,7 +1,6 @@
 ﻿using DAWM_Project.Data.Entity;
 using DAWM_Project.Services;
 using DAWM_Project.Services.Dtos;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
